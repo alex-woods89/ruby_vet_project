@@ -11,13 +11,35 @@ get '/pets' do
   erb(:index)
 end
 # new
-
+get '/pets/new' do
+  @vets = Vet.all
+  erb(:new)
+end
 # show
-
+get '/pets/:id' do
+  @pet = Pet.find( params[:id])
+  erb(:show)
+end
 # create
+post '/pets' do
+  @pet = Pet.new( params )
+  @pet.save
+  erb(:create)
+end
 
 # edit
-
+get '/pets/:id/edit' do
+  @pet = Pet.find(params[:id])
+  erb (:edit)
+end
 # UPDATE
-
+post '/pets/:id' do
+  Pet.new( params ).update
+  redirect to '/pets'
+end
 # destroy
+post '/pets/:id/delete' do
+  pet = Pet.find( params[:id])
+  pet.delete
+  redirect to '/pets'
+end
