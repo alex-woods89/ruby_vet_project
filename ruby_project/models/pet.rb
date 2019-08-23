@@ -56,7 +56,7 @@ def save()
       $1, $2, $3, $4, $5, $6
     )
     WHERE id = $7"
-    values = [@@name, @dob, @type_of_animal, @contact_details, @treatment_notes, @vet_id]
+    values = [@name, @dob, @type_of_animal, @contact_details, @treatment_notes, @vet_id, @id]
     SqlRunner.run(sql, values)
   end
 

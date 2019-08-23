@@ -1,4 +1,4 @@
-<form method="post" action="/pets/<%= @pet.id %>">
+<form method="POST" action="/pets/<%= @pet.id %>">
   <label for="name-field">Name:</label>
   <input
   type="text"
@@ -10,7 +10,7 @@
   <label for="dob-field">D.O.B:</label>
   <input
   type="text"
-  name="d.o.b"
+  name="dob"
   id="dob-field"
   value="<%= @pet.dob %>"
   />
