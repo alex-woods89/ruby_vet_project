@@ -21,6 +21,11 @@ class Vet
     @id = id.to_i
   end
 
+  def self.delete_all
+    sql = 'DELETE FROM vets'
+    SqlRunner.run(sql)
+  end
+
   def self.find(id)
     sql = "SELECT * FROM vets
     WHERE id = $1"

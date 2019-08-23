@@ -5,7 +5,7 @@ class Pet
 attr_reader :id
 attr_accessor :id, :name, :dob, :type_of_animal, :contact_details, :treatment_notes, :vet_id
 
-def initialise(options)
+def initialize(options)
   @id = options['id'].to_i if options['id']
   @name = options['name']
   @dob = options['dob']
@@ -27,7 +27,7 @@ def save()
     )
     VALUES
     (
-      $1, $2, $3, $4, $5 $6
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING id"
     values = [@name, @dob, @type_of_animal, @contact_details, @treatment_notes, @vet_id]
