@@ -56,7 +56,7 @@ class Customer
   end
 
   def self.find(id)
-    sql = "SELECT * FROM customer
+    sql = "SELECT * FROM customers
     WHERE id = $1"
     values = [id]
     result = SqlRunner.run(sql, values).first

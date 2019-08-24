@@ -1,0 +1,7 @@
+<% @customer.each do |customer| %>
+<p>Name: <%= customer.name %></p>
+<p>Appointment time: <%= customer.appointment %></p>
+<p>Pet: <%= customer.pet.name%></p>
+<h4><a href="/customer/<%=customer.id%>">Show Customer</a></h4>
+<hr />
+<%end%>

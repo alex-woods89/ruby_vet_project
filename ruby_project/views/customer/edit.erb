@@ -1,0 +1,33 @@
+<form method="POST" action="/customer/<%= @customer.id %>">
+  <label for="name-field">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @customer.name %>"
+  />
+
+  <label for="appointment-field">Appointment time:</label>
+  <input
+  type="text"
+  name="appointment"
+  id="appointment-field"
+  value="<%= @customer.appointment %>"
+  />
+
+<!--
+  <label for="select-pet">Select a Pet:</label>
+  <select name="vet_id" id="vet-selection">
+    <option hidden value="default">Select A Vet</option>
+    <option
+    value="1"
+    <%# <%= "selected" if @pet.vet.name == "Jim Smith" %> %>
+    >Jim Smith</option>
+    <option
+    value="2"
+    <%# <%= "selected" if @pet.vet.name == "Sarah Brown" %> %>
+    >Sarah Brown</option>
+  </select> -->
+
+  <input type='submit' value="Edit Customer">
+</form>

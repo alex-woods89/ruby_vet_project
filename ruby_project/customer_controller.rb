@@ -8,29 +8,29 @@ also_reload('./models/*')
 # index
 get '/customer' do
   @customer = Customer.all
-  erb(:index)
+  erb(:"customer/index")
 end
 # new
 get '/customer/new' do
   @pets = Pet.all
-  erb(:new)
+  erb(:"customer/new")
 end
 # show
 get '/customer/:id' do
   @customer = Customer.find( params[:id])
-  erb(:show)
+  erb(:"customer/show")
 end
 # create
 post '/customer' do
   @customer = Customer.new( params )
   @customer.save
-  erb(:create)
+  erb(:"customer/create")
 end
 
 # edit
 get '/customer/:id/edit' do
   @customer = Customer.find(params[:id])
-  erb (:edit)
+  erb (:"customer/edit")
 end
 # UPDATE
 post '/customer/:id' do
