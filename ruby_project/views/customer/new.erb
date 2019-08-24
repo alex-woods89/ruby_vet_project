@@ -14,12 +14,12 @@
   id="appointment-field"
   />
 
-  <label for="pet-field">Pet ID:</label>
-  <input
-  type="text"
-  name="pet"
-  id="pet-field"
-  />
+  <label for="pet_select">Select Pet:</label>
+  <select name="pet_id" id="pet_select">
+    <% @pets.each do |pet| %>
+    <option value=<%=pet.id%>><%=pet.name%></option>
+    <%end%>
+  </select>
 
   <input type="submit" value="New Customer">
 
