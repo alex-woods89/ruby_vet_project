@@ -1,5 +1,6 @@
 require_relative('../models/vet')
 require_relative('../models/pet')
+require_relative('../models/customer')
 
 vet1 = Vet.new({'name' => 'Jim Smith'})
 vet2 = Vet.new({'name' => 'Sarah Brown'})
@@ -28,3 +29,11 @@ pet1 = Pet.new({
     })
   pet1.save
   pet2.save
+
+  customer1 = Customer.new({
+    'name' => 'John',
+    'pet_id' => '1',
+    'appointment' => '12:00'
+    })
+
+    customer1.save

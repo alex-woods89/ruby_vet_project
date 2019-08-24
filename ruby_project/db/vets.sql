@@ -1,3 +1,4 @@
+DROP TABLE owners;
 DROP TABLE pets;
 DROP TABLE vets;
 
@@ -14,4 +15,11 @@ CREATE TABLE pets(
   contact_details VARCHAR(255),
   treatment_notes VARCHAR(255),
   vet_id INT8 REFERENCES vets(id)
+);
+
+CREATE TABLE customers(
+  id SERIAL8 PRIMARY KEY,
+  name VARCHAR(255),
+  appointment TIME,
+  pet_id INT8 REFERENCES pets(id)
 );
