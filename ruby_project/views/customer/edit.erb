@@ -16,6 +16,14 @@
   value="<%= @customer.appointment %>"
   />
 
+  <label for="contact-field">Contact Details:</label>
+  <input
+  type="text"
+  name="contact_details"
+  id="contact-field"
+  value="<%= @customer.contact_details %>"
+  />
+
   <div class="form-el">
       <label for="pet-select">Select Pet:</label>
       <select name="pet_id" id="pet-select" selected="<%= @customer.pet_id %>">

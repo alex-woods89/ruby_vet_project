@@ -13,7 +13,7 @@ pet1 = Pet.new({
   'name' => 'Tiddles',
   'dob' => '1/6/12',
   'type_of_animal' => 'cat',
-  'contact_details' => 'tiddles@icloud.com',
+
   'treatment_notes' => 'sore head prescribed paracetamol',
   'vet_id' => '1'
   })
@@ -34,6 +34,7 @@ pet1 = Pet.new({
     'name' => 'John',
     'pet_id' => '1',
     'appointment' => '12:00'
+    'contact_details' => 'tiddles@icloud.com',
     })
 
     customer1.save

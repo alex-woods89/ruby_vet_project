@@ -1,22 +1,23 @@
 class Customer
 
   attr_reader :id
-  attr_accessor :name, :appointment, :pet_id
+  attr_accessor :name, :appointment, :pet_id, :contact_details
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @pet_id = options['pet_id'].to_i
     @appointment = options['appointment']
+    @contact_details = options['contact_details']
   end
 
   def save()
     sql = "INSERT INTO customers
     (name, pet_id, appointment)
     VALUES
-    ($1, $2, $3)
+    ($1, $2, $3, $4)
     RETURNING id"
-    values = [@name, @pet_id, @appointment]
+    values = [@name, @pet_id, @appointment, @contact_details]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     @id = id
@@ -31,11 +32,12 @@ class Customer
     sql = "UPDATE customers
     SET (name,
          pet_id,
-         appointment)
+         appointment,
+       contact_details)
     =
-    ($1, $2, $3)
-    WHERE id = $4"
-    values = [@name, @pet_id, @appointment, @id]
+    ($1, $2, $3$4)
+    WHERE id = $5"
+    values = [@name, @pet_id, @appointment, @contact_details, @id]
     SqlRunner.run(sql, values)
   end
 
