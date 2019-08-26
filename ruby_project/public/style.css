@@ -1,6 +1,5 @@
 body {
   padding: 30px;
-  background-size: auto;
 }
 
 a {
@@ -11,6 +10,7 @@ a {
 a:hover {
   color: darkred;
 }
+
 
 #menu {
   width: 420px;
