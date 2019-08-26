@@ -15,19 +15,19 @@
   value="<%= @customer.appointment %>"
   />
 
-<!--
+
   <label for="select-pet">Select a Pet:</label>
-  <select name="vet_id" id="vet-selection">
-    <option hidden value="default">Select A Vet</option>
+  <select name="pet_id" id="pet-selection">
+    <option hidden value="default">Select A Pet</option>
     <option
     value="1"
-    <%# <%= "selected" if @pet.vet.name == "Jim Smith" %> %>
-    >Jim Smith</option>
+    <%= "selected" if @customer.pet.name == "Billy" %>
+    >Billy</option>
     <option
     value="2"
-    <%# <%= "selected" if @pet.vet.name == "Sarah Brown" %> %>
-    >Sarah Brown</option>
-  </select> -->
+    <%= "selected" if @customer.pet.name == "Tiddles" %>
+    >Tiddles</option>
+  </select>
 
   <input type='submit' value="Edit Customer">
 </form>

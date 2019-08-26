@@ -1,7 +1,7 @@
 class Customer
 
-  attr_reader :id, :pet_id
-  attr_accessor :name, :appointment
+  attr_reader :id
+  attr_accessor :name, :appointment, :pet_id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -27,9 +27,9 @@ class Customer
     return pet
   end
 
-  def update
+  def update()
     sql = "UPDATE customers
-    SET name, pet_id, appointment)
+    SET (name, pet_id, appointment)
     =
     ($1, $2, $3)
     WHERE id = $4"
@@ -37,7 +37,7 @@ class Customer
     SqlRunner.run(sql, values)
   end
 
-  def delete
+  def delete()
     sql = "DELETE FROM customers
           where id = $1"
           values = [@id]
