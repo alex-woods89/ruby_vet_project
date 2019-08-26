@@ -2,7 +2,6 @@ require_relative('../db/sql_runner')
 
 class Pet
 
-attr_reader :id
 attr_accessor :id, :name, :dob, :type_of_animal, :contact_details, :treatment_notes, :vet_id
 
 def initialize(options)

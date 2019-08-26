@@ -14,20 +14,19 @@
   id="appointment-field"
   value="<%= @customer.appointment %>"
   />
-
-
-  <label for="select-pet">Select a Pet:</label>
-  <select name="pet_id" id="pet-selection">
-    <option hidden value="default">Select A Pet</option>
-    <option
-    value="1"
-    <%= "selected" if @customer.pet.name == "Billy" %>
-    >Billy</option>
-    <option
-    value="2"
-    <%= "selected" if @customer.pet.name == "Tiddles" %>
-    >Tiddles</option>
-  </select>
+<!-- This is giving a foreign key constraint -->
+  <div class="form-el">
+      <label for="pet-select">Select Pet:</label>
+      <select name="pet_select" id="pet-select" selected="<%= @customer.pet_id %>">
+        <% @pets.each do |pet| %>
+          <% if pet.id == @customer.pet_id %>
+            <option value=<%= pet.id %> selected><%= pet.name %></option>
+          <% else %>
+            <option value=<%= pet.id %>><%= pet.name%></option>
+          <% end %>
+        <% end %>
+      </select>
+    </div>
 
   <input type='submit' value="Edit Customer">
 </form>

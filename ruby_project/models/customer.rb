@@ -29,11 +29,13 @@ class Customer
 
   def update()
     sql = "UPDATE customers
-    SET (name, pet_id, appointment)
+    SET (name,
+         pet_id,
+         appointment)
     =
     ($1, $2, $3)
     WHERE id = $4"
-    values = [@name, @pet_id, @appointment]
+    values = [@name, @pet_id, @appointment, @id]
     SqlRunner.run(sql, values)
   end
 
