@@ -26,13 +26,7 @@ class Customer
   def pet()
     pet = Pet.find(@pet_id)
     return pet
-  end
-
-  def array(banana)
-   array = []
-   array << banana
-   return array
-  end
+  end 
 
   def update()
     sql = "UPDATE customers
