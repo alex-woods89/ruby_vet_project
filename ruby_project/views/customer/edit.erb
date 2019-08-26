@@ -1,3 +1,4 @@
+
 <form method="POST" action="/customer/<%= @customer.id %>">
   <label for="name-field">Name:</label>
   <input
@@ -15,9 +16,11 @@
   value="<%= @customer.appointment %>"
   />
 <!-- This is giving a foreign key constraint -->
+binding.pry
+
   <div class="form-el">
       <label for="pet-select">Select Pet:</label>
-      <select name="pet_select" id="pet-select" selected="<%= @customer.pet_id %>">
+      <select name="pet_id" id="pet-select" selected="<%= @customer.pet_id %>">
         <% @pets.each do |pet| %>
           <% if pet.id == @customer.pet_id %>
             <option value=<%= pet.id %> selected><%= pet.name %></option>

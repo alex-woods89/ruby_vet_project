@@ -14,12 +14,12 @@ CREATE TABLE pets(
   type_of_animal VARCHAR(255),
   contact_details VARCHAR(255),
   treatment_notes VARCHAR(255),
-  vet_id INT8 REFERENCES vets(id) ON UPDATE CASCADE
+  vet_id INT8 REFERENCES vets(id)
 );
 
 CREATE TABLE customers(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   appointment TIMESTAMP,
-  pet_id INT8 REFERENCES pets(id) ON UPDATE CASCADE
+  pet_id INT8 REFERENCES pets(id)
 );
