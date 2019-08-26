@@ -19,7 +19,7 @@ CREATE TABLE pets(
 CREATE TABLE customers(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  appointment TIMESTAMP,
+  appointment VARCHAR(255),
   contact_details VARCHAR(255),
   pet_id INT8 REFERENCES pets(id) ON DELETE CASCADE
 );

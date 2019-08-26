@@ -30,6 +30,7 @@ end
 # edit
 get '/pets/:id/edit' do
   @pet = Pet.find(params[:id])
+  @vets = Vet.all
   erb (:edit)
 end
 # UPDATE

@@ -33,18 +33,19 @@
   value="<%= @pet.treatment_notes %>"
   />
 
-  <label for="select-vet">Select a Vet:</label>
-  <select name="vet_id" id="vet-selection">
-    <option hidden value="default">Select A Vet</option>
-    <option
-    value="1"
-    <%= "selected" if @pet.vet.name == "Jim Smith" %>
-    >Jim Smith</option>
-    <option
-    value="2"
-    <%= "selected" if @pet.vet.name == "Sarah Brown" %>
-    >Sarah Brown</option>
-  </select>
+  <div class="form-el">
+      <label for="vet-select">Select Vet:</label>
+      <select name="vet_id" id="vet-select" selected="<%= @pet.vet_id %>">
+        <% @vets.each do |vet| %>
+          <% if vet.id == @pet.vet_id %>
+            <option value=<%= vet.id %> selected><%= vet.name %></option>
+          <% else %>
+            <option value=<%= vet.id %>><%= vet.name%></option>
+          <% end %>
+        <% end %>
+      </select>
+    </div>
+
 
   <input type='submit' value="Edit Pet">
 </form>
