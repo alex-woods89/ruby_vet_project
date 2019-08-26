@@ -28,6 +28,12 @@ class Customer
     return pet
   end
 
+  def array(banana)
+   array = []
+   array << banana
+   return array
+  end
+
   def update()
     sql = "UPDATE customers
     SET (name,

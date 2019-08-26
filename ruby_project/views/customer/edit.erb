@@ -24,6 +24,17 @@
   value="<%= @customer.contact_details %>"
   />
 
+ <div class="form-el">
+   <h4>Select a Pet</h4>
+    <form action="index.html" method="post">
+              <% @pets.each do |pet| %>
+      <input type="checkbox" name="pet_id" value="<%=pet.id%>"><%= pet.name%></input>
+      <% end %>
+        <input type='submit' value="Edit Customer">
+    </form>
+ </div>
+
+
   <div class="form-el">
       <label for="pet-select">Select Pet:</label>
       <select name="pet_id" id="pet-select" selected="<%= @customer.pet_id %>">
