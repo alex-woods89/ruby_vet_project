@@ -15,6 +15,12 @@ CREATE TABLE customers(
   contact_details VARCHAR(255)
 );
 
+CREATE TABLE consultations(
+  id SERIAL8 PRIMARY KEY,
+  consultation_time VARCHAR(255),
+  treatment VARCHAR(255)
+);
+
 
 CREATE TABLE pets(
   id SERIAL8 PRIMARY KEY,

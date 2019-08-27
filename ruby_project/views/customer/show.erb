@@ -3,7 +3,7 @@
 <p>Contact Details: <%= @customer.contact_details %></p>
 <% @pets.each do |pet| %>
 <% if pet.customer_id == @customer.id %>
-<p>Pets: <%= pet.name%> </p>
+<p>Pet:<a href="/pets/<%=pet.id%>"><%=pet.name%></a></p>
 <% end %>
 <% end %>
 
