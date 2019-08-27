@@ -23,8 +23,6 @@
   value="<%= @pet.type_of_animal %>"
   />
 
-
-
   <label for="treatment-field">Treatment Notes:</label>
   <input
   type="text"
@@ -46,6 +44,18 @@
       </select>
     </div>
 
+    <div class="form-el">
+          <label for="customer-select">Select Customer:</label>
+          <select name="customer_id" id="customer-select" selected="<%= @pet.customer_id %>">
+            <% @customer.each do |customer| %>
+              <% if customer.id == @pet.customer_id %>
+                <option value=<%= customer.id %> selected><%= customer.name %></option>
+              <% else %>
+                <option value=<%= customer.id %>><%= customer.name%></option>
+              <% end %>
+            <% end %>
+          </select>
+        </div>
 
   <input type='submit' value="Edit Pet">
 </form>

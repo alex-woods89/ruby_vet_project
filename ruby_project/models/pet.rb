@@ -21,7 +21,7 @@ def save()
       dob,
       type_of_animal,
       treatment_notes,
-      vet_id
+      vet_id,
       customer_id
     )
     VALUES
@@ -44,7 +44,7 @@ def save()
     customer = Customer.find(@customer_id)
     return customer
   end
-  
+
   def update()
     sql = "UPDATE pets
     SET

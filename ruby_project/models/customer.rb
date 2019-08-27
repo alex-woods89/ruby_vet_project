@@ -1,7 +1,6 @@
 class Customer
 
-  attr_reader :id
-  attr_accessor :name, :appointment, :contact_details
+  attr_accessor :name, :appointment, :contact_details, :id
 
   def initialize(options)
     @id = options['id'].to_i
