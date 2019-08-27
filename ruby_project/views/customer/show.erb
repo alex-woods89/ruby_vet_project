@@ -1,9 +1,15 @@
 <p>Name: <%= @customer.name%></p>
 <p>Appointment time: <%= @customer.appointment%></p>
-<p>Pets:<%= @customer.pet.name%></p>
 <p>Contact Details: <%= @customer.contact_details %></p>
+<% @pets.each do |pet| %>
+<% if @pet.customer_id == @pet.customer.id %>
+<%= @pet.name %>
+<% else %>
+<%= "This customer has no pets" %>
+<% end %>
+<% end %>
 <p><a href="/customer/<%=@customer.id%>/edit">Edit Customer</a></p>
 <form action="/customer/<%=@customer.id%>/delete" method="post">
-   <input type="submit" value="Delete Customer"/>
+  <input type="submit" value="Delete Customer"/>
 </form>
 <hr />

@@ -1,10 +1,6 @@
 <% @pets.each do |pet| %>
 <p>Name: <%= pet.name %></p>
-<p>D.O.B: <%= pet.dob %></p>
 <p>Pet Type: <%= pet.type_of_animal%></p>
-<p>Treatment Notes: <%= pet.treatment_notes %></p>
-<p>Vet: <%= pet.vet.name%></p>
-<p>Customer: <%= pet.customer.name%></p>
 <h4><a href="/pets/<%=pet.id%>">Show Pet</a></h4>
 <hr />
 <%end%>

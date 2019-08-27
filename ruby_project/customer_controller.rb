@@ -19,6 +19,7 @@ end
 # show
 get '/customer/:id' do
   @customer = Customer.find( params[:id])
+  @pets = Pet.all
   erb(:"customer/show")
 end
 # create

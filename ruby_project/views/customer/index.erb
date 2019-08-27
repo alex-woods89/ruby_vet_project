@@ -1,8 +1,5 @@
 <% @customer.each do |customer| %>
 <p>Name: <%= customer.name %></p>
-<p>Appointment time: <%= customer.appointment %></p>
-<p>Pet: <%= customer.pet.name%></p>
-<p>Contact Details: <%= customer.contact_details%> </p>
 <h4><a href="/customer/<%=customer.id%>">Show Customer</a></h4>
 <hr />
 <%end%>
