@@ -1,6 +1,9 @@
 class Consultation
 
+attr_accessor :id, :consultation_time, :treatment
+
 def initialize(options)
+ @id = options['id'].to_i if options['id']
  @consultation_time = options['consultation_time']
  @treatment = options['treatment']
 end
@@ -23,7 +26,7 @@ def update()
   =
   ($1, $2)
   WHERE id = $3"
-  values = [@consultation_time, @treatment]
+  values = [@consultation_time, @treatment, @id]
   SqlRunner.run(sql, values)
 end
 

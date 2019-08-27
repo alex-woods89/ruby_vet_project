@@ -1,5 +1,5 @@
-<% @consultation.each do |consultation| %>
-<p>ID: <%= consultation.id %></p>
-<h4><a href="/consultation/<%=consultation.id%>">Show Consultation</a></h4>
+<% @consultation.each do |consult| %>
+<p>ID: <%= consult.id.to_s %></p>
+<h4><a href="/consultation/<%=consult.id%>">Show Consultation</a></h4>
 <hr />
 <%end%>
