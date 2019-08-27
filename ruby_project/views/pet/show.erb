@@ -4,8 +4,9 @@
 <p>Treatment Notes: <%= @pet.treatment_notes%></p>
 <p>Vet:<a href="/vets/<%=@pet.vet_id%>"><%= @pet.vet.name%></a></p>
 <p>Customer:<a href="/customer/<%=@pet.customer_id%>"><%= @pet.customer.name%></a></p>
+<p> <a href="/consultation/<%=@pet.consultation_id%>">Consultation time</a></p>
 <p><a href="/pets/<%=@pet.id%>/edit">Edit Pet</a></p>
 <form action="/pets/<%=@pet.id%>/delete" method="post">
-   <input type="submit" value="Delete Pet"/>
+<input type="submit" value="Delete Pet"/>
 </form>
 <hr />

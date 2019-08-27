@@ -1,6 +1,7 @@
 body {
   padding: 30px;
   background-image: url('/cat.jpg');
+  background-blend-mode: luminosity: lighten;
   background-size: 100%;
   font-family: 'Raleway', sans-serif;
 }
