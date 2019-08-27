@@ -1,7 +1,7 @@
 body {
   padding: 30px;
-  background-image: url('/cat.jpg');
-  background-blend-mode: luminosity: lighten;
+  background-color: rgba(76, 175, 80, 0.3);
+  /* background-image: url('/cat.jpg'); */
   background-size: 100%;
   font-family: 'Raleway', sans-serif;
 }
