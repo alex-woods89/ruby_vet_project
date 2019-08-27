@@ -1,0 +1,21 @@
+
+<form method="POST" action="/consultation/<%= @consultation.id %>">
+
+  <label for="consultation_time-field">Consultation time:</label>
+  <input
+  type="text"
+  name="consultation"
+  id="consultation-field"
+  value="<%= @consultation.consultation_time %>"
+  />
+
+  <label for="treatment-field">Treatment:</label>
+  <input
+  type="text"
+  name="treatment_details"
+  id="treatment-field"
+  value="<%= @consultation.treatment %>"
+  />
+
+  <input type='submit' value="Edit Consultation">
+</form>
