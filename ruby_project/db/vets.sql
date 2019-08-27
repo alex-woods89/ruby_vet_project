@@ -4,7 +4,8 @@ DROP TABLE vets;
 
 CREATE TABLE vets (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  specialism VARCHAR(255)
 );
 
 CREATE TABLE pets(

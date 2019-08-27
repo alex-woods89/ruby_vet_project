@@ -8,30 +8,30 @@ also_reload('./models/*')
 # index
 get '/pets' do
   @pets = Pet.all
-  erb(:index)
+  erb(:'pet/index')
 end
 # new
 get '/pets/new' do
   @vets = Vet.all
-  erb(:new)
+  erb(:'pet/new')
 end
 # show
 get '/pets/:id' do
   @pet = Pet.find( params[:id])
-  erb(:show)
+  erb(:'pet/show')
 end
 # create
 post '/pets' do
   @pet = Pet.new( params )
   @pet.save
-  erb(:create)
+  erb(:'pet/create')
 end
 
 # edit
 get '/pets/:id/edit' do
   @pet = Pet.find(params[:id])
   @vets = Vet.all
-  erb (:edit)
+  erb (:'pet/edit')
 end
 # UPDATE
 post '/pets/:id' do

@@ -4,18 +4,19 @@ require_relative('../db/sql_runner')
 class Vet
 
   attr_reader :id
-  attr_accessor :name
+  attr_accessor :name, :specialism
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
+    @specialism = options['specialism']
   end
 
   def save()
-    sql = "INSERT INTO vets(name)
-    VALUES ($1)
+    sql = "INSERT INTO vets(name, specialism)
+    VALUES ($1, $2)
     RETURNING id"
-    values = [@name]
+    values = [@name, @specialism]
     result = SqlRunner.run(sql, values)
     id = result.first["id"]
     @id = id.to_i
@@ -25,13 +26,13 @@ class Vet
     sql = "UPDATE vets
     SET
     (
-      name
+      name, specialism
     ) =
     (
-      $1
+      $1, $2
     )
-    WHERE id = $2"
-    values = [@name, @id]
+    WHERE id = $3"
+    values = [@name, @specialism, @id]
     SqlRunner.run(sql, values)
   end
 

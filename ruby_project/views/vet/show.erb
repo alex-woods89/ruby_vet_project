@@ -1,9 +1,0 @@
-<p>Name: <%= @customer.name%></p>
-<p>Appointment time: <%= @customer.appointment%></p>
-<p>Pets:<%= @customer.pet.name%></p>
-<p>Contact Details: <%= @customer.contact_details %></p>
-<p><a href="/customer/<%=@customer.id%>/edit">Edit Customer</a></p>
-<form action="/customer/<%=@customer.id%>/delete" method="post">
-   <input type="submit" value="Delete Customer"/>
-</form>
-<hr />

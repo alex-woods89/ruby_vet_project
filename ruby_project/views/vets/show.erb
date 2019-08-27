@@ -1,0 +1,7 @@
+<p>Name: <%= @vet.name%></p>
+<p>Specialism: <%= @vet.specialism %></p>
+<p><a href="/vets/<%=@vet.id%>/edit">Edit Vet</a></p>
+<form action="/vets/<%=@vet.id%>/delete" method="post">
+   <input type="submit" value="Delete Vet"/>
+</form>
+<hr />
