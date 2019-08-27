@@ -4,6 +4,7 @@ require('sinatra/reloader')
 require_relative('../models/pet')
 require_relative('../models/vet')
 require_relative('../models/customer')
+require_relative('../models/consultation')
 also_reload('../models/*')
 
 # index
