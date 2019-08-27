@@ -1,22 +1,22 @@
-  background-image: url('./cat.jpg');
-
 body {
   padding: 30px;
+  background-image: url('/cat.jpg');
   background-size: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
   text-decoration: none;
   color: red;
+  font-family: 'Raleway', sans-serif;
 }
 
 a:hover {
   color: darkred;
 }
 
-
 #menu {
-  width: 420px;
+  width: 620px;
   display: flex;
   margin: 0 auto;
 }
@@ -55,4 +55,11 @@ a:hover {
   vertical-align: middle;
   width: 160px;
   margin: 0 1em 0 0;
+}
+
+.hero body {
+  padding: 30px;
+  background-image: url('./cat.jpg');
+  background-size: 100%;
+  font-family: 'Raleway', sans-serif;
 }
