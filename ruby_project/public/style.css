@@ -1,5 +1,8 @@
+  background-image: url('./cat.jpg');
+
 body {
   padding: 30px;
+  background-size: 100%;
 }
 
 a {
