@@ -21,6 +21,7 @@ end
 get '/consultation/:id' do
   @consultation = Consultation.find( params[:id])
   @pets = Pet.all
+  @vets = Vet.all
   erb(:"consultation/show")
 end
 # create

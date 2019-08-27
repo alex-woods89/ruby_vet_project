@@ -1,5 +1,5 @@
 <% @consultation.each do |consult| %>
-<p>ID: <%= consult.id.to_s %></p>
+<p>Consultation Time: <%= consult.consultation_time %></p>
 <h4><a href="/consultation/<%=consult.id%>">Show Consultation</a></h4>
 <hr />
 <%end%>

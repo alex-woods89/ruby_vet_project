@@ -4,7 +4,9 @@
 <% @pets.each do |pet| %>
 <p>Pet:<a href="/pets/<%=pet.id%>"><%=pet.name%></a></p>
 <% end %>
-
+<% @vets.each do |vet| %>
+<p>Vet:<a href="/vets/<%=vet.id%>"><%=vet.name%></a></p>
+<%end%>
 
 <p><a href="/consultation/<%=@consultation.id%>/edit">Edit Consultation</a></p>
 <form action="/consultation/<%=@consultation.id%>/delete" method="post">
