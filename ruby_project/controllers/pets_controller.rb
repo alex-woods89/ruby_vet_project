@@ -1,10 +1,10 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require('sinatra/reloader')
-require_relative('./models/pet')
-require_relative('./models/vet')
-require_relative('./models/customer')
-also_reload('./models/*')
+require_relative('../models/pet')
+require_relative('../models/vet')
+require_relative('../models/customer')
+also_reload('../models/*')
 
 # index
 get '/pets' do

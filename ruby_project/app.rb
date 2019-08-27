@@ -1,5 +1,5 @@
 require( 'sinatra')
 require('sinatra/contrib/all')
-require_relative('./pets_controller')
-require_relative('./customer_controller')
-require_relative('./vets_controller')
+require_relative('./controllers/pets_controller')
+require_relative('./controllers/customer_controller')
+require_relative('./controllers/vets_controller')
