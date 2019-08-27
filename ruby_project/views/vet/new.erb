@@ -1,0 +1,33 @@
+<form method="post" action="/customer">
+
+  <label for="name-field">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  />
+
+  <label for="appointment-field">Appointment time:</label>
+  <input
+  type="text"
+  name="appointment"
+  id="appointment-field"
+  />
+
+  <label for="contact-field">Contact Details:</label>
+  <input
+  type="text"
+  name="contact_details"
+  id="contact-field"
+  />
+
+  <label for="pet_select">Select Pet:</label>
+  <select name="pet_id" id="pet_select">
+    <% @pets.each do |pet| %>
+    <option value=<%=pet.id%>><%=pet.name%></option>
+    <%end%>
+  </select>
+
+  <input type="submit" value="New Customer">
+
+</form>
