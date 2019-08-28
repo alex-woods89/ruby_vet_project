@@ -1,4 +1,5 @@
 DROP TABLE customers;
+DROP TABLE consultations;
 DROP TABLE pets;
 DROP TABLE vets;
 
