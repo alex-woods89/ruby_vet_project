@@ -2,10 +2,10 @@ DROP TABLE customers;
 DROP TABLE pets;
 DROP TABLE vets;
 
-CREATE TABLE vets (
+CREATE TABLE consultations(
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
-  specialism VARCHAR(255)
+  consultation_time VARCHAR(255),
+  treatment VARCHAR(255)
 );
 
 CREATE TABLE customers(
@@ -15,12 +15,12 @@ CREATE TABLE customers(
   contact_details VARCHAR(255)
 );
 
-CREATE TABLE consultations(
+CREATE TABLE vets (
   id SERIAL8 PRIMARY KEY,
-  consultation_time VARCHAR(255),
-  treatment VARCHAR(255)
+  name VARCHAR(255),
+  specialism VARCHAR(255),
+  consultation_id INT8 REFERENCES consultations(id) ON DELETE CASCADE
 );
-
 
 CREATE TABLE pets(
   id SERIAL8 PRIMARY KEY,

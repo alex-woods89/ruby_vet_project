@@ -7,6 +7,7 @@
 <% end %>
 <% end %>
 <% @vets.each do |vet| %>
+<% if vet.consultation_id == @consultation.id %>
 <p>Vet:<a href="/vets/<%=vet.id%>"><%=vet.name%></a></p>
 <%end%>
 
