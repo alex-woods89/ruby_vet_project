@@ -59,7 +59,7 @@
 
         <div class="form-el">
               <label for="consultation-select">Select Consultation:</label>
-              <select name="consultation" id="consultation-select" selected="<%= @pet.consultation_id %>">
+              <select name="consultation_id" id="consultation-select" selected="<%= @pet.consultation_id %>">
                 <% @consultations.each do |consultation| %>
                   <% if consultation.id == @pet.consultation_id %>
                     <option value=<%= consultation.id %> selected><%= consultation.consultation_time %></option>
@@ -68,7 +68,7 @@
                   <% end %>
                 <% end %>
               </select>
-            </div> 
+            </div>
 
   <input type='submit' value="Edit Pet">
 </form>

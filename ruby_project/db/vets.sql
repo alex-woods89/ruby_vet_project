@@ -9,6 +9,7 @@ CREATE TABLE consultations(
   treatment VARCHAR(255)
 );
 
+
 CREATE TABLE customers(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
