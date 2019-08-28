@@ -36,7 +36,7 @@ get '/pets/:id/edit' do
   @pet = Pet.find(params[:id])
   @vets = Vet.all
   @customer = Customer.all
-  @consultation = Consultation.all
+  @consultations = Consultation.all
   erb (:'pet/edit')
 end
 # UPDATE
