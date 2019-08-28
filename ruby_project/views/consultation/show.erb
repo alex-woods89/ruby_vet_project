@@ -2,7 +2,9 @@
 <p>Consultation time: <%= @consultation.consultation_time%></p>
 <p>Treatment: <%= @consultation.treatment %></p>
 <% @pets.each do |pet| %>
+<% if pet.consultation_id == @consultation.id %>
 <p>Pet:<a href="/pets/<%=pet.id%>"><%=pet.name%></a></p>
+<% end %>
 <% end %>
 <% @vets.each do |vet| %>
 <p>Vet:<a href="/vets/<%=vet.id%>"><%=vet.name%></a></p>
