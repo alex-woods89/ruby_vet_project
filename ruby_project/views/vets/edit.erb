@@ -16,5 +16,18 @@
   value="<%= @vet.specialism %>"
   />
 
+  <div class="form-el">
+        <label for="consultation-select">Select Consultation:</label>
+        <select name="consultation" id="consultation-select" selected="<%= @vet.consultation_id %>">
+          <% @consultation.each do |consultation| %>
+            <% if consultation.id == @vet.consultation_id %>
+              <option value=<%= consultation.id %> selected><%= consultation.consultation_time %></option>
+            <% else %>
+              <option value=<%= consultation.id %>><%= consultation.consultation_time%></option>
+            <% end %>
+          <% end %>
+        </select>
+      </div>
+
   <input type='submit' value="Edit Vet">
 </form>

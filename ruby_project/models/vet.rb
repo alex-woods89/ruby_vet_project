@@ -44,6 +44,11 @@ class Vet
     SqlRunner.run(sql, values)
   end
 
+  def consultation
+    consultation = Consultation.find(@consultation_id)
+    return consultation
+  end
+
 
   def self.delete_all
     sql = 'DELETE FROM vets'

@@ -10,6 +10,7 @@
 <% if vet.consultation_id == @consultation.id %>
 <p>Vet:<a href="/vets/<%=vet.id%>"><%=vet.name%></a></p>
 <%end%>
+<% end %>
 
 <p><a href="/consultation/<%=@consultation.id%>/edit">Edit Consultation</a></p>
 <form action="/consultation/<%=@consultation.id%>/delete" method="post">

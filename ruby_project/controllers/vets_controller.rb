@@ -3,6 +3,7 @@ require('sinatra/contrib/all')
 require('sinatra/reloader')
 require_relative('../models/pet')
 require_relative('../models/vet')
+require_relative('../models/consultation')
 also_reload('../models/*')
 
 # index
@@ -13,11 +14,13 @@ end
 # new
 get '/vets/new' do
   @vet = Vet.all
+  @consultation = Consultation.all
   erb(:'vets/new')
 end
 # show
 get '/vets/:id' do
   @vet = Vet.find( params[:id])
+  @consultation = Consultation.all
   erb(:'vets/show')
 end
 # create
@@ -31,6 +34,7 @@ end
 get '/vets/:id/edit' do
   @vet = Vet.find(params[:id])
   @pets = Pet.all
+  @consultation = Consultation.all
   erb (:'vets/edit')
 end
 # UPDATE

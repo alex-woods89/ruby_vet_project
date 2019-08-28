@@ -14,6 +14,13 @@
   id="specialism-field"
   />
 
+  <label for="consultation_select">Select Consultation:</label>
+  <select name="consultation_id" id="consultation_select">
+    <% @consultation.each do |consultation| %>
+    <option value=<%=consultation.id%>><%=consultation.consultation_time%></option>
+    <%end%>
+  </select>
+
   <input type="submit" value="New Vet">
 
 </form>

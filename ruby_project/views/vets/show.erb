@@ -1,5 +1,10 @@
 <p>Name: <%= @vet.name%></p>
 <p>Specialism: <%= @vet.specialism %></p>
+<% @consultation.each do |consultation| %>
+<% if @vet.consultation_id == consultation.id %>
+<p> <a href="/consultation/<%=@vet.consultation_id%>">Consultation time</a></p>
+<% end %>
+<% end %>
 <p><a href="/vets/<%=@vet.id%>/edit">Edit Vet</a></p>
 <form action="/vets/<%=@vet.id%>/delete" method="post">
    <input type="submit" value="Delete Vet"/>
